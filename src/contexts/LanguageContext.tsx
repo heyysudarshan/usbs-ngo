@@ -82,7 +82,7 @@ const translations: Record<string, Record<string, string>> = {
     back: "Back",
     checking: "Checking...",
     submitting: "Submitting...",
-    submit: "Submit",
+    submit: "Submit"
   },
   hi: {
     welcome: "USBS में आपका स्वागत है",
