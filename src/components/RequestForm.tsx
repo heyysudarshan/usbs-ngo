@@ -120,8 +120,10 @@ const RequestForm: React.FC = () => {
         submittedAt: new Date(),
       });
       setCurrentUserMobile(formData.mobileNumber);
+
       toast.success(t("submitted"));
       window.location.replace("/dashboard#requests");
+      localStorage.setItem("onboardingCompleted", "true");
     } catch {
       toast.error(t("submit_failed"));
     } finally {
@@ -139,6 +141,7 @@ const RequestForm: React.FC = () => {
         if (!existing.empty) {
           setCurrentUserMobile(mobile);
           toast.success(t("existing_request_found"));
+          localStorage.setItem("onboardingCompleted", "true");
           return window.location.replace("/dashboard#requests");
         }
         const userDoc = await getDoc(doc(db!, "users", mobile));
