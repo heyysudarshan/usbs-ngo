@@ -262,7 +262,7 @@ const UserDashboard: React.FC = () => {
     const handleLogout = () => {
         setCurrentUserMobile(null);
         localStorage.removeItem("currentUserMobile");
-        navigate("/", { replace: true });
+        navigate("/onboarding#1", { replace: true });
     };
 
     const handleNetworkRetry = () => {
