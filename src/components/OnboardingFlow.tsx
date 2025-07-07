@@ -51,7 +51,6 @@ const OnboardingFlow: React.FC = () => {
     // If first time landing on /onboarding, push dummy state to disable back
     if (window.location.pathname === "/onboarding" && (window.location.hash === "" || window.location.hash === "#1")) {
       history.replaceState(null, "", "/onboarding#1");
-      history.pushState(null, "", location.href);
     }
 
     const handlePopState = () => {
